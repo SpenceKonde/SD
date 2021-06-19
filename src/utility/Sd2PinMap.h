@@ -31,7 +31,7 @@
 
 #endif // Sd2PinMap_h
 
-#elif defined(__AVR_ATmega4809__) // Arduino UNO WiFI Rev2 follows
+#elif defined(__AVR_ARCH__) && defined(__AVR_ARCH__) > 100 ) // Arduino UNO WiFI Rev2 follows
 
 #ifndef Sd2PinMap_h
   #define Sd2PinMap_h
