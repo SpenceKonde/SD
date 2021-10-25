@@ -31,9 +31,11 @@
 
 #endif // Sd2PinMap_h
 
-#elif (__AVR_ARCH__ == 102 || __AVR_ARCH__  == 103 || __AVR_ARCH__ == 104)
+#elif (defined(__AVR_ARCH__) && (__AVR_ARCH__ == 102 || __AVR_ARCH__  == 103 || __AVR_ARCH__ == 104))
     // See section 3.19.6.3 at https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html for the meaning of 102, 103, 104
-
+    // This covers all modern AVRs with up to 128k flash: megaAVR 0-series (like 4809), tinyAVR 0/1/2-series,
+    // and AVR Dx-series, plus the all announced but unreleased AVR devices as of Q4 2021. 
+    // on other cores.
 #ifndef Sd2PinMap_h
   #define Sd2PinMap_h
 
