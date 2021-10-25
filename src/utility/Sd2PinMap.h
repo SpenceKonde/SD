@@ -31,7 +31,8 @@
 
 #endif // Sd2PinMap_h
 
-#elif defined(__AVR_ARCH__) && defined(__AVR_ARCH__) > 100 ) // Arduino UNO WiFI Rev2 follows
+#elif (__AVR_ARCH__ == 102 || __AVR_ARCH__  == 103 || __AVR_ARCH__ == 104)
+    // See section 3.19.6.3 at https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html for the meaning of 102, 103, 104
 
 #ifndef Sd2PinMap_h
   #define Sd2PinMap_h
