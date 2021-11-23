@@ -39,6 +39,11 @@
   #define Sd2PinMap_h
 
   #include <Arduino.h>
+// I don't know what the heck we're doing with these pin numbers, since USE_SPI_LIB will always be set
+// thus, the pins will be managed entirely by the SPI lib, and none of these pins ever get touched, except
+// for the SS pin, and only if no CS pin is specified. That we always use the SPI library is good, since
+// modern AVRs can move the SPI port around. Some tinyAVR have two options, megaAVR 0-series has 2 or 3, DA
+// But in any event, this expands support to every modern AVR -
 
   uint8_t const SS_PIN = SS;
   uint8_t const MOSI_PIN = MOSI;
